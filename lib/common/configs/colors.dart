@@ -13,6 +13,8 @@ const cTransparent = Colors.transparent;
 
 //--App Colors Pallets:
 //--------------------------------------------------
+const cPrimer = Color.fromARGB(255, 104, 133, 156);
+const cSecond = Color.fromARGB(255, 243, 231, 206);
 //primaryText
 const cTx1 = cBlack;
 //secondarText = Grey

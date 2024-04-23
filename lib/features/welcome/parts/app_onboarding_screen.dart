@@ -1,3 +1,4 @@
+import 'package:flt_ulearn/common/helpers/widgets_hlp.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../global.dart';
@@ -24,7 +25,6 @@ class AppOnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Column(
       children: [
         Image.asset(
@@ -32,19 +32,18 @@ class AppOnboardingScreen extends StatelessWidget {
           fit: BoxFit.fitWidth,
         ),
         Container(
-            margin: EdgeInsets.only(top: 15),
-            child: text24Normal(text: title)),
+            margin: EdgeInsets.only(top: 15), 
+            child: Text(title, style:myStyle(fSize: 24))),
         Container(
           margin: EdgeInsets.only(top: 15),
           padding: EdgeInsets.only(left: 30, right: 30),
-          child: Text16Normal(text: subTitle),
+          child: Text(subTitle, style:myStyle(fSize: 16)),
         ),
         _nextButton(index, controller, context)
       ],
     );
   }
 }
-
 
 Widget _nextButton(int index, PageController controller, BuildContext context) {
   return GestureDetector(
@@ -54,12 +53,11 @@ Widget _nextButton(int index, PageController controller, BuildContext context) {
             duration: const Duration(milliseconds: 300), curve: Curves.linear);
       } else {
         //remember if we are first time or not
-        Global.storageService
-            .setBool(STORAGE_DEVICE_OPEN_FIRST_KEY, true);
+        Global.storageService.setBool(STORAGE_DEVICE_OPEN_FIRST_KEY, true);
 
         Navigator.pushNamed(
           context,
-          "/sign_in",
+          "/signin",
         );
       }
     },
@@ -69,7 +67,8 @@ Widget _nextButton(int index, PageController controller, BuildContext context) {
       margin: EdgeInsets.only(top: 100, left: 25, right: 25),
       decoration: appBoxShadow(),
       child: Center(
-          child: Text(index < 3 ? "next" : "Get started", style:TextStyle(color: Colors.white) )),
+          child: Text(index < 3 ? "next" : "Get started",
+              style: TextStyle(color: cWhite))),
     ),
   );
 }

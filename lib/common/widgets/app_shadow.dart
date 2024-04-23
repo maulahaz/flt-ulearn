@@ -63,7 +63,7 @@ class AppBoxDecorationImage extends StatelessWidget {
       {Key? key,
       this.width = 40,
       this.height = 40,
-      this.imagePath = pathProfile})
+      this.imagePath = pathSvgProfile})
       : super(key: key);
 
   @override

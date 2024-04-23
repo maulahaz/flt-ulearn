@@ -1,6 +1,11 @@
 //--Icons:
 const String _iconBase = "lib/assets/icons";
-const String pathProfile = '$_iconBase/person.svg';
+const String pathSvgProfile = '$_iconBase/person.svg';
+const String pathImgGoogle = '$_iconBase/google.png';
+const String pathImgFacebook = '$_iconBase/facebook.png';
+const String pathImgApple = '$_iconBase/apple.png';
+const String pathImgUser = '$_iconBase/user.png';
+const String pathImgLock = '$_iconBase/lock.png';
 //--Images:
 const String _imageBase = "lib/assets/images";
 const String pathLogo = '$_imageBase/lg2.png';
