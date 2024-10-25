@@ -1,23 +1,17 @@
-# Project : ULearn App 
-*********************************************
-Mobile Learn App <br>
+# ulearning_app
 
-# Notes:
-- Started at: Week-4 of Mar-24
-- Flutter using 3.19.4
-- State Mgt: Riverpod
-- Backend: Laravel-Admin with Laravel v.10
-- DB: MySQL
-- Packages: flutter_bloc, http, intl, dartz, equatable, shared_preferences, cached_network_image, <br>
-            flutter_svg, step_progress_indicator, ...
+A new Flutter project.
 
-# References:
-- [Flutter Shop App | Dart & State Management | Riverpod](https://udemy.com)
+## Getting Started
 
-# Resource References:
-- [Colors](https://coolors.co/palettes/trending)
-- [SVG Icons](http://svgrepo.com)
+This project is a starting point for a Flutter application.
 
-# Snapshot:
-![xx](xx)
-<hr>
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+# course-selling-app-riverpod-
