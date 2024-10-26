@@ -1,6 +1,6 @@
 {
-    "name": "flt_ulearn",
-    "short_name": "flt_ulearn",
+    "name": "flt_ulearning",
+    "short_name": "flt_ulearning",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

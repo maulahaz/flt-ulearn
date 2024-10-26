@@ -1,17 +1,16 @@
-import 'package:flt_ulearn/common/configs/x_configs.dart';
+import 'package:flt_ulearning/common/utils/app_colors.dart';
+import 'package:flt_ulearning/common/widgets/app_shadow.dart';
+import 'package:flt_ulearning/common/widgets/text_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'x_widgets.dart';
-
-Widget appButton({
-  double width = 325,
-  double height = 50,
-  String buttonName = "",
-  bool isLogin = true,
-  BuildContext? context,
-  void Function()? func
-}) {
+Widget appButton(
+    {double width = 325,
+    double height = 50,
+    String buttonName = "",
+    bool isLogin = true,
+    BuildContext? context,
+    void Function()? func}) {
   return GestureDetector(
     onTap: func,
     child: Container(
@@ -19,14 +18,14 @@ Widget appButton({
       height: height.h,
       //isLogin true then send primary color else send white color
       decoration: appBoxShadow(
-          color: isLogin ? cElement1 : cWhite,
-          boxBorder: Border.all(color: cElement1)),
+          color: isLogin ? AppColors.primaryElement : Colors.white,
+          boxBorder: Border.all(color: AppColors.primaryFourthElementText)),
       child: Center(
-          child: Text16Normal(
+          child: text16Normal(
               text: buttonName,
               color: isLogin
-                  ? cBg1
-                  : cTx1)),
+                  ? AppColors.primaryBackground
+                  : AppColors.primaryText)),
     ),
   );
 }

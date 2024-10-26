@@ -1,19 +1,19 @@
-import 'package:flt_ulearn/common/configs/x_configs.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-BoxDecoration appBoxShadow({
-  Color color = cElement1,
-  double radius = 15,
-  double sR = 1,
-  double bR = 2,
-  BoxBorder? boxBorder,
-  BorderRadius? borderRadius,
-}) {
+import '../utils/app_colors.dart';
+import '../utils/image_res.dart';
+
+BoxDecoration appBoxShadow(
+    {Color color = AppColors.primaryElement,
+    double radius = 15,
+    double sR = 1,
+    double bR = 2,
+    BoxBorder? boxBorder}) {
   return BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(radius),
       border: boxBorder,
-
       boxShadow: [
         BoxShadow(
             color: Colors.grey.withOpacity(0.1),
@@ -22,10 +22,9 @@ BoxDecoration appBoxShadow({
             offset: const Offset(0, 1))
       ]);
 }
-//chatty
 
 BoxDecoration appBoxShadowWithRadius(
-    {Color color = cElement1,
+    {Color color = AppColors.primaryElement,
     double radius = 15,
     double sR = 1,
     double bR = 2,
@@ -33,7 +32,7 @@ BoxDecoration appBoxShadowWithRadius(
   return BoxDecoration(
       color: color,
       borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20), topRight: Radius.circular(20)),
+          topLeft: Radius.circular(20.h), topRight: Radius.circular(20.h)),
       border: border,
       boxShadow: [
         BoxShadow(
@@ -45,9 +44,9 @@ BoxDecoration appBoxShadowWithRadius(
 }
 
 BoxDecoration appBoxDecorationTextField(
-    {Color color = cBg1,
+    {Color color = AppColors.primaryBackground,
     double radius = 15,
-    Color borderColor = cElement1}) {
+    Color borderColor = AppColors.primaryFourthElementText}) {
   return BoxDecoration(
       color: color,
       borderRadius: BorderRadius.circular(radius),
@@ -58,12 +57,11 @@ class AppBoxDecorationImage extends StatelessWidget {
   final double width;
   final double height;
   final String imagePath;
-
   const AppBoxDecorationImage(
       {Key? key,
-      this.width = 40,
-      this.height = 40,
-      this.imagePath = pathSvgProfile})
+      this.width = 25,
+      this.height = 25,
+      this.imagePath = ImageRes.profile})
       : super(key: key);
 
   @override
@@ -78,7 +76,7 @@ class AppBoxDecorationImage extends StatelessWidget {
               imagePath,
             ),
           ),
-          borderRadius: BorderRadius.circular(20)),
+          borderRadius: BorderRadius.circular(20.w)),
     );
   }
 }
